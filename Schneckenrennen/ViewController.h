@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)diceButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *schn_blu_view;
+
+
 
 @end
