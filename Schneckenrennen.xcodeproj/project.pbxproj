@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6F96FFF150A5CAC00AA8F40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F96FFE150A5CAC00AA8F40 /* UIKit.framework */; };
+		F6F97001150A5CAC00AA8F40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F97000150A5CAC00AA8F40 /* Foundation.framework */; };
+		F6F97003150A5CAC00AA8F40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F97002150A5CAC00AA8F40 /* CoreGraphics.framework */; };
+		F6F97009150A5CAC00AA8F40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6F97007150A5CAC00AA8F40 /* InfoPlist.strings */; };
+		F6F9700B150A5CAC00AA8F40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F9700A150A5CAC00AA8F40 /* main.m */; };
+		F6F9700F150A5CAC00AA8F40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F9700E150A5CAC00AA8F40 /* AppDelegate.m */; };
+		F6F97012150A5CAC00AA8F40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F97011150A5CAC00AA8F40 /* ViewController.m */; };
+		F6F97015150A5CAC00AA8F40 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F97013150A5CAC00AA8F40 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F6F96FFA150A5CAC00AA8F40 /* Schneckenrennen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schneckenrennen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F96FFE150A5CAC00AA8F40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F6F97000150A5CAC00AA8F40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6F97002150A5CAC00AA8F40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F6F97006150A5CAC00AA8F40 /* Schneckenrennen-Info.plist */ = {isa = PBXFileReference; path = "Schneckenrennen-Info.plist"; sourceTree = "<group>"; };
+		F6F97008150A5CAC00AA8F40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6F9700A150A5CAC00AA8F40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6F9700C150A5CAC00AA8F40 /* Schneckenrennen-Prefix.pch */ = {isa = PBXFileReference; path = "Schneckenrennen-Prefix.pch"; sourceTree = "<group>"; };
+		F6F9700D150A5CAC00AA8F40 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F6F9700E150A5CAC00AA8F40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F6F97010150A5CAC00AA8F40 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		F6F97011150A5CAC00AA8F40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F6F97014150A5CAC00AA8F40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6F96FF7150A5CAC00AA8F40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F96FFF150A5CAC00AA8F40 /* UIKit.framework in Frameworks */,
+				F6F97001150A5CAC00AA8F40 /* Foundation.framework in Frameworks */,
+				F6F97003150A5CAC00AA8F40 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6F96FEF150A5CAB00AA8F40 = {
+			isa = PBXGroup;
+			children = (
+				F6F97004150A5CAC00AA8F40 /* Schneckenrennen */,
+				F6F96FFD150A5CAC00AA8F40 /* Frameworks */,
+				F6F96FFB150A5CAC00AA8F40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6F96FFB150A5CAC00AA8F40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6F96FFA150A5CAC00AA8F40 /* Schneckenrennen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6F96FFD150A5CAC00AA8F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F96FFE150A5CAC00AA8F40 /* UIKit.framework */,
+				F6F97000150A5CAC00AA8F40 /* Foundation.framework */,
+				F6F97002150A5CAC00AA8F40 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6F97004150A5CAC00AA8F40 /* Schneckenrennen */ = {
+			isa = PBXGroup;
+			children = (
+				F6F9700D150A5CAC00AA8F40 /* AppDelegate.h */,
+				F6F9700E150A5CAC00AA8F40 /* AppDelegate.m */,
+				F6F97010150A5CAC00AA8F40 /* ViewController.h */,
+				F6F97011150A5CAC00AA8F40 /* ViewController.m */,
+				F6F97013150A5CAC00AA8F40 /* ViewController.xib */,
+				F6F97005150A5CAC00AA8F40 /* Supporting Files */,
+			);
+			path = Schneckenrennen;
+			sourceTree = "<group>";
+		};
+		F6F97005150A5CAC00AA8F40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6F97006150A5CAC00AA8F40 /* Schneckenrennen-Info.plist */,
+				F6F97007150A5CAC00AA8F40 /* InfoPlist.strings */,
+				F6F9700A150A5CAC00AA8F40 /* main.m */,
+				F6F9700C150A5CAC00AA8F40 /* Schneckenrennen-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6F96FF9150A5CAC00AA8F40 /* Schneckenrennen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6F97018150A5CAC00AA8F40 /* Build configuration list for PBXNativeTarget "Schneckenrennen" */;
+			buildPhases = (
+				F6F96FF6150A5CAC00AA8F40 /* Sources */,
+				F6F96FF7150A5CAC00AA8F40 /* Frameworks */,
+				F6F96FF8150A5CAC00AA8F40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Schneckenrennen;
+			productName = Schneckenrennen;
+			productReference = F6F96FFA150A5CAC00AA8F40 /* Schneckenrennen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6F96FF1150A5CAB00AA8F40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Tobias Bischoff";
+			};
+			buildConfigurationList = F6F96FF4150A5CAB00AA8F40 /* Build configuration list for PBXProject "Schneckenrennen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F6F96FEF150A5CAB00AA8F40;
+			productRefGroup = F6F96FFB150A5CAC00AA8F40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6F96FF9150A5CAC00AA8F40 /* Schneckenrennen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6F96FF8150A5CAC00AA8F40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F97009150A5CAC00AA8F40 /* InfoPlist.strings in Resources */,
+				F6F97015150A5CAC00AA8F40 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6F96FF6150A5CAC00AA8F40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F9700B150A5CAC00AA8F40 /* main.m in Sources */,
+				F6F9700F150A5CAC00AA8F40 /* AppDelegate.m in Sources */,
+				F6F97012150A5CAC00AA8F40 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F6F97007150A5CAC00AA8F40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6F97008150A5CAC00AA8F40 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6F97013150A5CAC00AA8F40 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6F97014150A5CAC00AA8F40 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6F97016150A5CAC00AA8F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F6F97017150A5CAC00AA8F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6F97019150A5CAC00AA8F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Schneckenrennen/Schneckenrennen-Prefix.pch";
+				INFOPLIST_FILE = "Schneckenrennen/Schneckenrennen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6F9701A150A5CAC00AA8F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Schneckenrennen/Schneckenrennen-Prefix.pch";
+				INFOPLIST_FILE = "Schneckenrennen/Schneckenrennen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6F96FF4150A5CAB00AA8F40 /* Build configuration list for PBXProject "Schneckenrennen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6F97016150A5CAC00AA8F40 /* Debug */,
+				F6F97017150A5CAC00AA8F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6F97018150A5CAC00AA8F40 /* Build configuration list for PBXNativeTarget "Schneckenrennen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6F97019150A5CAC00AA8F40 /* Debug */,
+				F6F9701A150A5CAC00AA8F40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6F96FF1150A5CAB00AA8F40 /* Project object */;
+}
