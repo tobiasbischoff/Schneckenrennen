@@ -11,7 +11,25 @@
 @interface ViewController : UIViewController
 - (IBAction)diceButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *schn_blu_view;
+@property (weak, nonatomic) IBOutlet UIImageView *schn_ora_view;
+@property (weak, nonatomic) IBOutlet UIImageView *schn_ros_view;
+@property (weak, nonatomic) IBOutlet UIImageView *schn_gre_view;
 
+@property (strong, nonatomic) NSArray * schn_blu_anim;
+@property (strong, nonatomic) NSArray * schn_blu_anim_flip;
 
+@property (strong, nonatomic) NSArray * schn_ora_anim;
+@property (strong, nonatomic) NSArray * schn_ora_anim_flip;
+
+@property (strong, nonatomic) NSArray * schn_ros_anim;
+@property (strong, nonatomic) NSArray * schn_ros_anim_flip;
+
+@property (strong, nonatomic) NSArray * schn_gre_anim;
+@property (strong, nonatomic) NSArray * schn_gre_anim_flip;
+
+@property (weak, nonatomic) IBOutlet UIImageView *becher;
+
+- (void)moveSchnWithID:(int)id;
+- (void)newgame;
 
 @end
