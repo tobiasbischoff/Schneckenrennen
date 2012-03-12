@@ -233,6 +233,25 @@ int  schn_gre_pos;
                                               [self moveSchnWithID:wurf1];
                                               [self moveSchnWithID:wurf2];
                                               NSLog(@"wurf 1: %d wurf2 %d", wurf1, wurf2);
+                                              if (schn_blu_pos > 6 ) {
+                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die blaue Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
+                                                  [alert show];
+                                              }
+                                              
+                                              if (schn_ora_pos > 6 ) {
+                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die orange Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
+                                                  [alert show];
+                                              }
+                                              
+                                              if (schn_ros_pos > 6 ) {
+                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die rosa Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
+                                                  [alert show];
+                                              }
+                                              
+                                              if (schn_gre_pos > 6 ) {
+                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die grüne Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
+                                                  [alert show];
+                                              }
                                           }
                           ];
 
@@ -241,25 +260,7 @@ int  schn_gre_pos;
 
     
     
-    if (schn_blu_pos > 6 ) {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die blaue Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-    [alert show];
-    }
     
-    if (schn_ora_pos > 6 ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die orange Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-        [alert show];
-    }
-    
-    if (schn_ros_pos > 6 ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die rosa Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-        [alert show];
-    }
-    
-    if (schn_gre_pos > 6 ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die grüne Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-        [alert show];
-    }
     
 
 }

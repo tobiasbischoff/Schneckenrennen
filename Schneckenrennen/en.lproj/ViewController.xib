@@ -41,7 +41,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{864, 659}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="843710517"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -74,9 +74,9 @@
 					<object class="IBUIImageView" id="6331826">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{49, 56}, {137, 116}}</string>
+						<string key="NSFrame">{{30, 15}, {137, 116}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView" ref="844591225"/>
+						<reference key="NSNextKeyView" ref="288109779"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -86,12 +86,12 @@
 							<string key="NSResourceName">schn_blu_1.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="844591225">
+					<object class="IBUIImageView" id="288109779">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{49, 197}, {137, 116}}</string>
+						<string key="NSFrame">{{30, 156}, {137, 116}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView" ref="20604209"/>
+						<reference key="NSNextKeyView" ref="980536511"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -100,12 +100,12 @@
 							<string key="NSResourceName">schn_ora_1.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="20604209">
+					<object class="IBUIImageView" id="980536511">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{49, 333}, {137, 116}}</string>
+						<string key="NSFrame">{{30, 291}, {137, 116}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView" ref="994256832"/>
+						<reference key="NSNextKeyView" ref="980103689"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -114,12 +114,12 @@
 							<string key="NSResourceName">schn_ros_1.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="994256832">
+					<object class="IBUIImageView" id="980103689">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{49, 470}, {137, 116}}</string>
+						<string key="NSFrame">{{30, 420}, {137, 116}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView" ref="848277602"/>
+						<reference key="NSNextKeyView" ref="454018625"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -128,12 +128,12 @@
 							<string key="NSResourceName">schn_gre_1.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="848277602">
+					<object class="IBUIImageView" id="843710517">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{312, 728}, {400, 315}}</string>
+						<string key="NSFrame">{{312, 735}, {400, 315}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView" ref="454018625"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -186,7 +186,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">schn_ora_view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="844591225"/>
+						<reference key="destination" ref="288109779"/>
 					</object>
 					<int key="connectionID">11</int>
 				</object>
@@ -194,7 +194,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">schn_ros_view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="20604209"/>
+						<reference key="destination" ref="980536511"/>
 					</object>
 					<int key="connectionID">12</int>
 				</object>
@@ -202,7 +202,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">schn_gre_view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="994256832"/>
+						<reference key="destination" ref="980103689"/>
 					</object>
 					<int key="connectionID">13</int>
 				</object>
@@ -210,7 +210,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">becher</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="848277602"/>
+						<reference key="destination" ref="843710517"/>
 					</object>
 					<int key="connectionID">15</int>
 				</object>
@@ -248,11 +248,11 @@
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="454018625"/>
+							<reference ref="843710517"/>
 							<reference ref="6331826"/>
-							<reference ref="844591225"/>
-							<reference ref="20604209"/>
-							<reference ref="994256832"/>
-							<reference ref="848277602"/>
+							<reference ref="288109779"/>
+							<reference ref="980536511"/>
+							<reference ref="980103689"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -268,22 +268,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="844591225"/>
+						<reference key="object" ref="288109779"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
-						<reference key="object" ref="20604209"/>
+						<reference key="object" ref="980536511"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
-						<reference key="object" ref="994256832"/>
+						<reference key="object" ref="980103689"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="848277602"/>
+						<reference key="object" ref="843710517"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
@@ -305,7 +305,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">15</int>
+			<int key="maxID">17</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
