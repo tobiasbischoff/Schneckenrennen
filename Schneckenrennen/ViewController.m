@@ -13,7 +13,10 @@
 @end
 
 @implementation ViewController
+@synthesize gameName;
 @synthesize becher;
+@synthesize w1View;
+@synthesize w2View;
 @synthesize schn_blu_view, schn_blu_anim,schn_blu_anim_flip;
 @synthesize schn_ora_view, schn_ora_anim, schn_ora_anim_flip;
 @synthesize schn_ros_view, schn_ros_anim, schn_ros_anim_flip;
@@ -23,12 +26,16 @@ int  schn_blu_pos;
 int  schn_ora_pos;
 int  schn_ros_pos;
 int  schn_gre_pos;
+int wurf1;
+int wurf2;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]]];
+    //[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]]];
+    
+    [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_neutral_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
     
     NSArray * becher_anim = [[NSArray alloc] initWithObjects:
                              [UIImage imageNamed:@"becher_l.png"],
@@ -111,6 +118,9 @@ int  schn_gre_pos;
     [self setSchn_ros_view:nil];
     [self setSchn_gre_view:nil];
     [self setBecher:nil];
+    [self setGameName:nil];
+    [self setW1View:nil];
+    [self setW2View:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -132,6 +142,7 @@ int  schn_gre_pos;
     if (id == 1)
     {   
         if (schn_blu_pos == 0) schn_blu_pos = 1;
+        if (schn_blu_pos > 6) schn_blu_pos--;        
         [schn_blu_view  startAnimating];
         schn_blu_view.transform = CGAffineTransformMakeTranslation(schn_blu_pos*120, 0);
         schn_blu_pos++;
@@ -140,6 +151,7 @@ int  schn_gre_pos;
     if (id == 2)
     {   
         if (schn_ora_pos == 0) schn_ora_pos = 1;
+        if (schn_ora_pos > 6) schn_ora_pos--;
         [schn_ora_view  startAnimating];
         schn_ora_view.transform = CGAffineTransformMakeTranslation(schn_ora_pos*120, 0);
         schn_ora_pos++;
@@ -147,6 +159,7 @@ int  schn_gre_pos;
     if (id == 3)
     {   
         if (schn_ros_pos == 0) schn_ros_pos = 1;
+        if (schn_ros_pos > 6) schn_ros_pos--;
         [schn_ros_view  startAnimating];
         schn_ros_view.transform = CGAffineTransformMakeTranslation(schn_ros_pos*120, 0);
         schn_ros_pos++;
@@ -154,6 +167,7 @@ int  schn_gre_pos;
     if (id == 4)
     {   
         if (schn_gre_pos == 0) schn_gre_pos = 1;
+        if (schn_gre_pos > 6) schn_gre_pos--;
         [schn_gre_view  startAnimating];
         schn_gre_view.transform = CGAffineTransformMakeTranslation(schn_gre_pos*120, 0);
         schn_gre_pos++;
@@ -207,9 +221,52 @@ int  schn_gre_pos;
 
 }
 
+- (void)setW1withID:(int)id
+{
+    if (id == 1)
+    {   
+        [w1View setImage:[UIImage imageNamed:@"w_blu_1.png"]];
+    }
+    
+    if (id == 2)
+    {   
+        [w1View setImage:[UIImage imageNamed:@"w_ora_1.png"]];
+    }
+    if (id == 3)
+    {   
+      [w1View setImage:[UIImage imageNamed:@"w_ros_1.png"]];
+    }
+    if (id == 4)
+    {   
+      [w1View setImage:[UIImage imageNamed:@"w_gre_1.png"]];
+    }
 
+}
+
+- (void)setW2withID:(int)id
+{
+    if (id == 1)
+    {   
+        [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_blu_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
+    }
+    
+    if (id == 2)
+    {   
+         [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_ora_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
+    }
+    if (id == 3)
+    {   
+         [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_ros_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
+    }
+    if (id == 4)
+    {   
+         [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_gre_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
+    }
+    
+}
 
 - (IBAction)diceButton:(id)sender {
+    
     
     [UIView animateWithDuration:1
                           delay:0
@@ -220,6 +277,10 @@ int  schn_gre_pos;
                      completion:^(BOOL finished){ 
                          
                          [becher startAnimating];
+                         wurf1 = (arc4random() % 4) + 1;
+                         wurf2 = (arc4random() % 4) + 1;
+                         [self setW1withID:wurf1];
+                         [self setW2withID:wurf2];
                      
                          [UIView animateWithDuration:1
                                                delay:1
@@ -228,11 +289,11 @@ int  schn_gre_pos;
                                               becher.transform = CGAffineTransformMakeTranslation(0, 0); 
                                           }
                                           completion:^(BOOL finished){ 
-                                              int wurf1 = (arc4random() % 4) + 1;
-                                              int wurf2 = (arc4random() % 4) + 1;
+                                             
                                               [self moveSchnWithID:wurf1];
                                               [self moveSchnWithID:wurf2];
                                               NSLog(@"wurf 1: %d wurf2 %d", wurf1, wurf2);
+                                            
                                               if (schn_blu_pos > 6 ) {
                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die blaue Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
                                                   [alert show];
