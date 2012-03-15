@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVAudioPlayerDelegate>
+{
+    AVAudioPlayer * audioplayer;
+    AVAudioPlayer * finplayer;
+}
 - (IBAction)diceButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *schn_blu_view;
 @property (weak, nonatomic) IBOutlet UIImageView *schn_ora_view;
@@ -31,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *becher;
 @property (weak, nonatomic) IBOutlet UIImageView *w1View;
 @property (weak, nonatomic) IBOutlet UIImageView *w2View;
+@property (weak, nonatomic) IBOutlet UIButton *diceButton;
 
 - (void)moveSchnWithID:(int)id;
 - (void)setW1withID:(int)id;

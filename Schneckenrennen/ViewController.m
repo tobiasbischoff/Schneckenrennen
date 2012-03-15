@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ManualViewController.h"
+
+
 
 @interface ViewController ()
 
@@ -17,6 +20,7 @@
 @synthesize becher;
 @synthesize w1View;
 @synthesize w2View;
+@synthesize diceButton;
 @synthesize schn_blu_view, schn_blu_anim,schn_blu_anim_flip;
 @synthesize schn_ora_view, schn_ora_anim, schn_ora_anim_flip;
 @synthesize schn_ros_view, schn_ros_anim, schn_ros_anim_flip;
@@ -28,11 +32,15 @@ int  schn_ros_pos;
 int  schn_gre_pos;
 int wurf1;
 int wurf2;
+BOOL alreadywon = FALSE;
+BOOL shownmanual = FALSE;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+    
+    
     //[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]]];
     
     [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_neutral_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
@@ -106,9 +114,23 @@ int wurf2;
     [schn_gre_view setAnimationRepeatCount:3];
     [schn_gre_view setAnimationImages:schn_gre_anim];
     
-
+    [gameName setText:NSLocalizedString(@"Schneckenrennen", @"Holzschildtitel")];
    
 
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    if (!shownmanual) {
+        ManualViewController * mvc = [[ManualViewController alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mvc];
+        [navController setModalPresentationStyle:UIModalPresentationFormSheet];
+        [self presentModalViewController:navController animated:YES];
+        shownmanual = TRUE;
+    }
+    
 }
 
 - (void)viewDidUnload
@@ -121,6 +143,7 @@ int wurf2;
     [self setGameName:nil];
     [self setW1View:nil];
     [self setW2View:nil];
+    [self setDiceButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -179,6 +202,7 @@ int wurf2;
 
 - (void) newgame
 {
+    alreadywon = FALSE;
     
     [schn_blu_view setAnimationImages:schn_blu_anim_flip];
     [schn_blu_view setImage:[schn_blu_anim_flip objectAtIndex:0]];
@@ -210,6 +234,11 @@ int wurf2;
                         [schn_ora_view setImage:[schn_ora_anim objectAtIndex:0]];
                         [schn_ros_view setImage:[schn_ros_anim objectAtIndex:0]];
                         [schn_gre_view setImage:[schn_gre_anim objectAtIndex:0]];
+                        [schn_blu_view setAnimationImages:schn_blu_anim];
+                        [schn_ora_view setAnimationImages:schn_ora_anim];
+                        [schn_ros_view setAnimationImages:schn_ros_anim];
+                        [schn_gre_view setAnimationImages:schn_gre_anim];
+                         
                      }
      ];
     
@@ -267,7 +296,7 @@ int wurf2;
 
 - (IBAction)diceButton:(id)sender {
     
-    
+    [diceButton setEnabled:FALSE];
     [UIView animateWithDuration:1
                           delay:0
                         options:UIViewAnimationCurveEaseOut
@@ -276,6 +305,13 @@ int wurf2;
                      }
                      completion:^(BOOL finished){ 
                          
+                         NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"wuerfel" ofType:@"mp3"];
+                         audioplayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath: soundPath] error:nil];
+                        
+                         audioplayer.volume = 1;
+                         // audioPlayer.numberOfLoops = 1;
+                         [audioplayer prepareToPlay];
+                         [audioplayer play];
                          [becher startAnimating];
                          wurf1 = (arc4random() % 4) + 1;
                          wurf2 = (arc4random() % 4) + 1;
@@ -293,27 +329,16 @@ int wurf2;
                                               [self moveSchnWithID:wurf1];
                                               [self moveSchnWithID:wurf2];
                                               NSLog(@"wurf 1: %d wurf2 %d", wurf1, wurf2);
-                                            
-                                              if (schn_blu_pos > 6 ) {
-                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die blaue Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-                                                  [alert show];
+                                              if (schn_blu_pos > 6 | schn_ora_pos > 6 | schn_ros_pos > 6 | schn_gre_pos > 6) {
+                                                  NSString *finsoundPath = [[NSBundle mainBundle] pathForResource:@"kids" ofType:@"mp3"];
+                                                  finplayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath: finsoundPath] error:nil];
+                                                  finplayer.volume = 1;
+                                                  [finplayer prepareToPlay];
+                                                  [finplayer setDelegate:self];
+                                                  [finplayer play];
                                               }
                                               
-                                              if (schn_ora_pos > 6 ) {
-                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die orange Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-                                                  [alert show];
-                                              }
-                                              
-                                              if (schn_ros_pos > 6 ) {
-                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die rosa Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-                                                  [alert show];
-                                              }
-                                              
-                                              if (schn_gre_pos > 6 ) {
-                                                  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ziel!" message:@"Die grüne Schnecke hat gewonnen!"  delegate:self cancelButtonTitle:@"Nochmal!" otherButtonTitles: nil];
-                                                  [alert show];
-                                              }
-                                          }
+                                        }
                           ];
 
                      }
@@ -321,9 +346,47 @@ int wurf2;
 
     
     
-    
+    [diceButton setEnabled:TRUE];
     
 
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+   
+    if (schn_blu_pos > 6 ) {
+        if (!alreadywon) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die blaue Schnecke hat gewonnen!",@"Blaue Schnecke win-text")   delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
+        [alert show];
+        }
+        alreadywon = TRUE;
+    }
+    
+    if (schn_ora_pos > 6 ) {
+         if (!alreadywon) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die orange Schnecke hat gewonnen!",@"Orage Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
+        [alert show];
+         }
+        alreadywon = TRUE;
+    }
+    
+    if (schn_ros_pos > 6 ) {
+         if (!alreadywon) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die rosa Schnecke hat gewonnen!",@"rosa Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
+        [alert show];
+         }
+        alreadywon = TRUE;
+    }
+    
+    if (schn_gre_pos > 6 ) {
+          if (!alreadywon) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die grüne Schnecke hat gewonnen!",@"grüne Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
+        [alert show];
+          }
+        alreadywon = TRUE;
+    }
+
+    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
