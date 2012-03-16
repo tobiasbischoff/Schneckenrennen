@@ -119,7 +119,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Who leads the first Slug into the goal?</string>
+						<string key="IBUIText">Who leads the first Snail into the goal?</string>
 						<reference key="IBUITextColor" ref="647546404"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
