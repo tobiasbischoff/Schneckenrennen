@@ -150,7 +150,7 @@ BOOL shownmanual = FALSE;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return  UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 - (void)moveSchnWithID:(int)id
