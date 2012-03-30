@@ -19,7 +19,7 @@
 @synthesize becher;
 @synthesize w1View;
 @synthesize w2View;
-@synthesize diceButton;
+@synthesize diceButton,doneSetting;
 
 int wurf1;
 int wurf2;
@@ -151,6 +151,16 @@ BOOL shownmanual = FALSE;
 
 - (IBAction)diceButton:(id)sender {
     
+    if ([schn_blu_view position] == [schn_blu_view realposition] && [schn_ora_view position] == [schn_ora_view realposition] && [schn_ros_view position] == [schn_ros_view realposition] && [schn_gre_view position] == [schn_gre_view realposition]) [self setDoneSetting:TRUE];
+    
+    if (!doneSetting) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Hey!",@"UIAlertView Titel") message:NSLocalizedString(@"Du musst erst die Schnecken setzen.",@"erst setzten text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nagut", @"setzen box knopf") otherButtonTitles: nil];
+        [alert show];
+        return;
+
+    }
+    
     [diceButton setEnabled:FALSE];
     [UIView animateWithDuration:1
                           delay:0
@@ -164,7 +174,7 @@ BOOL shownmanual = FALSE;
                          audioplayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath: soundPath] error:nil];
                         
                          audioplayer.volume = 1;
-                         // audioPlayer.numberOfLoops = 1;
+                      
                          [audioplayer prepareToPlay];
                          [audioplayer play];
                          [becher startAnimating];
@@ -182,6 +192,7 @@ BOOL shownmanual = FALSE;
                                           completion:^(BOOL finished){ 
                                               [self processMoves:wurf1];
                                               [self processMoves:wurf2];
+                                              [self setDoneSetting:FALSE];
                                               NSLog(@"wurf 1: %d wurf2 %d", wurf1, wurf2);
                                               if ([schn_blu_view position] > 6 | [schn_ora_view position] > 6 | [schn_ros_view position] > 6 | [schn_gre_view position] > 6) {
                                                   NSString *finsoundPath = [[NSBundle mainBundle] pathForResource:@"kids" ofType:@"mp3"];
@@ -272,9 +283,11 @@ BOOL shownmanual = FALSE;
     
 }
 
+
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
         
-    [self newgame];
+    //[self newgame];
 }
 @end

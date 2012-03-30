@@ -36,6 +36,7 @@
 		F6253446151274A900E05C9A /* formback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6253444151274A900E05C9A /* formback@2x.png */; };
 		F625344B151278AD00E05C9A /* ManualViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625344D151278AD00E05C9A /* ManualViewController.xib */; };
 		F625345015127B1D00E05C9A /* w_gre_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F625344F15127B1D00E05C9A /* w_gre_1@2x.png */; };
+		F63B505C15265F1E005A7B47 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = F63B505B15265F1E005A7B47 /* TODO.txt */; };
 		F6C863C815224A9800A5BEA8 /* TBSchnecke.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C863C715224A9800A5BEA8 /* TBSchnecke.m */; };
 		F6C863CB15224B6600A5BEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */; };
 		F6D47B95150A8A2100AD0AFE /* schn_gre_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */; };
@@ -94,8 +95,8 @@
 		F625343015126C7900E05C9A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F625343415126E0C00E05C9A /* Schneckenrennen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Schneckenrennen-Info.plist"; sourceTree = "<group>"; };
 		F625343515126E4700E05C9A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F625343615126FE400E05C9A /* ManualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualViewController.h; sourceTree = "<group>"; };
-		F625343715126FE400E05C9A /* ManualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManualViewController.m; sourceTree = "<group>"; };
+		F625343615126FE400E05C9A /* ManualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManualViewController.h; path = ../ManualViewController.h; sourceTree = "<group>"; };
+		F625343715126FE400E05C9A /* ManualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManualViewController.m; path = ../ManualViewController.m; sourceTree = "<group>"; };
 		F625343B151270F400E05C9A /* help1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help1.png; sourceTree = "<group>"; };
 		F625343C151270F400E05C9A /* help1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help1@2x.png"; sourceTree = "<group>"; };
 		F625343F1512731A00E05C9A /* help2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help2.png; sourceTree = "<group>"; };
@@ -105,8 +106,9 @@
 		F625344C151278AD00E05C9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ManualViewController.xib; sourceTree = "<group>"; };
 		F625344E151278B300E05C9A /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ManualViewController.xib; sourceTree = "<group>"; };
 		F625344F15127B1D00E05C9A /* w_gre_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_gre_1@2x.png"; sourceTree = "<group>"; };
-		F6C863C615224A9800A5BEA8 /* TBSchnecke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSchnecke.h; sourceTree = "<group>"; };
-		F6C863C715224A9800A5BEA8 /* TBSchnecke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSchnecke.m; sourceTree = "<group>"; };
+		F63B505B15265F1E005A7B47 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		F6C863C615224A9800A5BEA8 /* TBSchnecke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBSchnecke.h; path = ../TBSchnecke.h; sourceTree = "<group>"; };
+		F6C863C715224A9800A5BEA8 /* TBSchnecke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBSchnecke.m; path = ../TBSchnecke.m; sourceTree = "<group>"; };
 		F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schn_gre_1.png; sourceTree = "<group>"; };
 		F6D47B92150A8A2100AD0AFE /* schn_gre_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schn_gre_1@2x.png"; sourceTree = "<group>"; };
@@ -173,6 +175,10 @@
 		F6D47B9A150A8A2700AD0AFE /* Bilder */ = {
 			isa = PBXGroup;
 			children = (
+				F6253429151264C700E05C9A /* Default-Landscape@2x~ipad.png */,
+				F6253427151264C400E05C9A /* Default-Landscape~ipad.png */,
+				F62534251512619C00E05C9A /* icon.png */,
+				F62534231512619800E05C9A /* icon@2x.png */,
 				F6253443151274A900E05C9A /* formback.png */,
 				F6253444151274A900E05C9A /* formback@2x.png */,
 				F625343F1512731A00E05C9A /* help2.png */,
@@ -220,16 +226,7 @@
 		F6F96FEF150A5CAB00AA8F40 = {
 			isa = PBXGroup;
 			children = (
-				F6C863C615224A9800A5BEA8 /* TBSchnecke.h */,
-				F6C863C715224A9800A5BEA8 /* TBSchnecke.m */,
-				F625343615126FE400E05C9A /* ManualViewController.h */,
-				F625343715126FE400E05C9A /* ManualViewController.m */,
-				F625344D151278AD00E05C9A /* ManualViewController.xib */,
-				F625342F15126C6A00E05C9A /* Localizable.strings */,
-				F6253429151264C700E05C9A /* Default-Landscape@2x~ipad.png */,
-				F6253427151264C400E05C9A /* Default-Landscape~ipad.png */,
-				F62534251512619C00E05C9A /* icon.png */,
-				F62534231512619800E05C9A /* icon@2x.png */,
+				F63B505B15265F1E005A7B47 /* TODO.txt */,
 				F625341415124BF700E05C9A /* Sounds */,
 				F6F97004150A5CAC00AA8F40 /* Schneckenrennen */,
 				F6F96FFD150A5CAC00AA8F40 /* Frameworks */,
@@ -261,6 +258,12 @@
 		F6F97004150A5CAC00AA8F40 /* Schneckenrennen */ = {
 			isa = PBXGroup;
 			children = (
+				F6C863C615224A9800A5BEA8 /* TBSchnecke.h */,
+				F6C863C715224A9800A5BEA8 /* TBSchnecke.m */,
+				F625343615126FE400E05C9A /* ManualViewController.h */,
+				F625343715126FE400E05C9A /* ManualViewController.m */,
+				F625344D151278AD00E05C9A /* ManualViewController.xib */,
+				F625342F15126C6A00E05C9A /* Localizable.strings */,
 				F6F9700D150A5CAC00AA8F40 /* AppDelegate.h */,
 				F6F9700E150A5CAC00AA8F40 /* AppDelegate.m */,
 				F6F97010150A5CAC00AA8F40 /* ViewController.h */,
@@ -385,6 +388,7 @@
 				F6253445151274A900E05C9A /* formback.png in Resources */,
 				F6253446151274A900E05C9A /* formback@2x.png in Resources */,
 				F625345015127B1D00E05C9A /* w_gre_1@2x.png in Resources */,
+				F63B505C15265F1E005A7B47 /* TODO.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +417,6 @@
 				F625343015126C7900E05C9A /* de */,
 			);
 			name = Localizable.strings;
-			path = Schneckenrennen;
 			sourceTree = "<group>";
 		};
 		F625344D151278AD00E05C9A /* ManualViewController.xib */ = {
@@ -423,6 +426,7 @@
 				F625344E151278B300E05C9A /* de */,
 			);
 			name = ManualViewController.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F6F97007150A5CAC00AA8F40 /* InfoPlist.strings */ = {

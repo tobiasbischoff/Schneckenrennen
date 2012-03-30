@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/CoreAnimation.h>
 
+@class ViewController;
+
 @interface TBSchnecke : UIImageView {
  
     NSArray * schn_anim;
@@ -19,6 +21,8 @@
 
 @property (nonatomic) int xmax;
 @property (nonatomic) int position;
+@property (nonatomic) int realposition;
+
 
 - (void)stopJiggling;
 - (void)startJiggling:(NSInteger)count;

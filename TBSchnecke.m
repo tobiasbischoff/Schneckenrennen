@@ -9,7 +9,7 @@
 #import "TBSchnecke.h"
 
 @implementation TBSchnecke
-@synthesize xmax,position;
+@synthesize xmax,position,realposition;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -78,7 +78,7 @@
     //self.transform = CGAffineTransformMakeTranslation(position*120, 0);
     
     [self setFrame:CGRectMake(30+position*120, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
-   
+    realposition = position;
     
     [UIView commitAnimations];
     

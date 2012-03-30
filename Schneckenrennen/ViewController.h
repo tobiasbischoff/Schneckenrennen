@@ -31,11 +31,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *w2View;
 @property (weak, nonatomic) IBOutlet UIButton *diceButton;
 
+@property (nonatomic) BOOL doneSetting;
+
 
 - (void)setW1withID:(int)id;
 - (void)setW2withID:(int)id;
 
 - (void)newgame;
+
 
 - (void)processMoves:(int)wurf;
 

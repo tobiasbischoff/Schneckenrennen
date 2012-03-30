@@ -1,0 +1,5 @@
+- sounds auf systemsound umstellen
+- gewinnevent zum delegate-protokoll machen
+- gewinnnotification in eigenen viewcontroller.
+- mehr sounds.
+- kleine gimmicks.
