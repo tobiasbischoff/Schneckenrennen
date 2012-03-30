@@ -10,7 +10,6 @@
 #import "ManualViewController.h"
 
 
-
 @interface ViewController ()
 
 @end
@@ -21,15 +20,7 @@
 @synthesize w1View;
 @synthesize w2View;
 @synthesize diceButton;
-@synthesize schn_blu_view, schn_blu_anim,schn_blu_anim_flip;
-@synthesize schn_ora_view, schn_ora_anim, schn_ora_anim_flip;
-@synthesize schn_ros_view, schn_ros_anim, schn_ros_anim_flip;
-@synthesize schn_gre_view, schn_gre_anim, schn_gre_anim_flip;
 
-int  schn_blu_pos;
-int  schn_ora_pos;
-int  schn_ros_pos;
-int  schn_gre_pos;
 int wurf1;
 int wurf2;
 BOOL alreadywon = FALSE;
@@ -39,10 +30,19 @@ BOOL shownmanual = FALSE;
 {
     [super viewDidLoad];
 	
+    //Schnecke ist eigene Klasse test
+    schn_blu_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 15, 137, 116)];
+    schn_ora_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 156, 137, 116)];
+    schn_ros_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 291, 137, 116)];
+    schn_gre_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 420, 137, 116)];
     
+    [[self view] addSubview:schn_blu_view];
+    [[self view] addSubview:schn_ora_view];
+    [[self view] addSubview:schn_ros_view];
+    [[self view] addSubview:schn_gre_view];
+        
     
-    //[[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back.png"]]];
-    
+    //zweiten würfel drehen
     [w2View setImage:[UIImage imageWithCGImage:[[UIImage imageNamed:@"w_neutral_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored]];
     
     NSArray * becher_anim = [[NSArray alloc] initWithObjects:
@@ -55,64 +55,6 @@ BOOL shownmanual = FALSE;
     [becher setAnimationDuration:0.3];
     [becher setAnimationRepeatCount:5];
     
-    schn_blu_anim = [[NSArray alloc] initWithObjects:
-                           [UIImage imageNamed:@"schn_blu_1.png"],
-                           [UIImage imageNamed:@"schn_blu_2.png"],
-                           nil];
-    
-    schn_blu_anim_flip = [[NSArray alloc] initWithObjects:
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_blu_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_blu_2.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          nil];
-    
-    [schn_blu_view setAnimationDuration:0.3];
-    [schn_blu_view setAnimationRepeatCount:3];
-    [schn_blu_view setAnimationImages:schn_blu_anim];
-    
-    
-    
-    
-    schn_ora_anim = [[NSArray alloc] initWithObjects:
-                               [UIImage imageNamed:@"schn_ora_1.png"],
-                               [UIImage imageNamed:@"schn_ora_2.png"],
-                               nil];
-    
-    schn_ora_anim_flip = [[NSArray alloc] initWithObjects:
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_ora_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_ora_2.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          nil];
-    
-    [schn_ora_view setAnimationDuration:0.3];
-    [schn_ora_view setAnimationRepeatCount:3];
-    [schn_ora_view setAnimationImages:schn_ora_anim];
-    
-    schn_ros_anim = [[NSArray alloc] initWithObjects:
-                               [UIImage imageNamed:@"schn_ros_1.png"],
-                               [UIImage imageNamed:@"schn_ros_2.png"],
-                               nil];
-    
-    schn_ros_anim_flip = [[NSArray alloc] initWithObjects:
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_ros_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_ros_2.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          nil];
-    
-    [schn_ros_view setAnimationDuration:0.3];
-    [schn_ros_view setAnimationRepeatCount:3];
-    [schn_ros_view setAnimationImages:schn_ros_anim];
-    
-    schn_gre_anim = [[NSArray alloc] initWithObjects:
-                               [UIImage imageNamed:@"schn_gre_1.png"],
-                               [UIImage imageNamed:@"schn_gre_2.png"],
-                               nil];
-    
-    schn_gre_anim_flip = [[NSArray alloc] initWithObjects:
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_gre_1.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          [UIImage imageWithCGImage:[[UIImage imageNamed:@"schn_gre_2.png"]CGImage] scale:1 orientation:UIImageOrientationUpMirrored],
-                          nil];
-    
-    [schn_gre_view setAnimationDuration:0.3];
-    [schn_gre_view setAnimationRepeatCount:3];
-    [schn_gre_view setAnimationImages:schn_gre_anim];
     
     [gameName setText:NSLocalizedString(@"Schneckenrennen", @"Holzschildtitel")];
    
@@ -135,10 +77,7 @@ BOOL shownmanual = FALSE;
 
 - (void)viewDidUnload
 {
-    [self setSchn_blu_view:nil];
-    [self setSchn_ora_view:nil];
-    [self setSchn_ros_view:nil];
-    [self setSchn_gre_view:nil];
+
     [self setBecher:nil];
     [self setGameName:nil];
     [self setW1View:nil];
@@ -153,100 +92,16 @@ BOOL shownmanual = FALSE;
     return  UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
-- (void)moveSchnWithID:(int)id
-{
-    
-    [UIView beginAnimations:nil context:NULL];  
-    [UIView setAnimationDuration: 1];  
-    [UIView setAnimationDelay:0];
-    [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];  
-    [UIView setAnimationBeginsFromCurrentState:YES];  
-    
-    if (id == 1)
-    {   
-        if (schn_blu_pos == 0) schn_blu_pos = 1;
-        if (schn_blu_pos > 6) schn_blu_pos--;        
-        [schn_blu_view  startAnimating];
-        schn_blu_view.transform = CGAffineTransformMakeTranslation(schn_blu_pos*120, 0);
-        schn_blu_pos++;
-    }
-    
-    if (id == 2)
-    {   
-        if (schn_ora_pos == 0) schn_ora_pos = 1;
-        if (schn_ora_pos > 6) schn_ora_pos--;
-        [schn_ora_view  startAnimating];
-        schn_ora_view.transform = CGAffineTransformMakeTranslation(schn_ora_pos*120, 0);
-        schn_ora_pos++;
-    }
-    if (id == 3)
-    {   
-        if (schn_ros_pos == 0) schn_ros_pos = 1;
-        if (schn_ros_pos > 6) schn_ros_pos--;
-        [schn_ros_view  startAnimating];
-        schn_ros_view.transform = CGAffineTransformMakeTranslation(schn_ros_pos*120, 0);
-        schn_ros_pos++;
-    }
-    if (id == 4)
-    {   
-        if (schn_gre_pos == 0) schn_gre_pos = 1;
-        if (schn_gre_pos > 6) schn_gre_pos--;
-        [schn_gre_view  startAnimating];
-        schn_gre_view.transform = CGAffineTransformMakeTranslation(schn_gre_pos*120, 0);
-        schn_gre_pos++;
-    }
-    
-    [UIView commitAnimations]; 
-    
-}
 
 - (void) newgame
 {
     alreadywon = FALSE;
     
-    [schn_blu_view setAnimationImages:schn_blu_anim_flip];
-    [schn_blu_view setImage:[schn_blu_anim_flip objectAtIndex:0]];
-    [schn_blu_view  startAnimating];
-
-    [schn_ora_view  startAnimating];
-    [schn_ora_view setAnimationImages:schn_ora_anim_flip];
-    [schn_ora_view setImage:[schn_ora_anim_flip objectAtIndex:0]];
- 
-    [schn_ros_view  startAnimating];
-    [schn_ros_view setAnimationImages:schn_ros_anim_flip];
-    [schn_ros_view setImage:[schn_ros_anim_flip objectAtIndex:0]];
- 
-    [schn_gre_view  startAnimating];
-    [schn_gre_view setAnimationImages:schn_gre_anim_flip];
-    [schn_gre_view setImage:[schn_gre_anim_flip objectAtIndex:0]];
+    [schn_blu_view goback];
+    [schn_ora_view goback];
+    [schn_ros_view goback];
+    [schn_gre_view goback];
     
-    [UIView animateWithDuration:1
-                          delay:0
-                        options:UIViewAnimationCurveEaseOut
-                     animations:^{                                                                                            
-                          schn_blu_view.transform = CGAffineTransformMakeTranslation(0, 0);       
-                          schn_ora_view.transform = CGAffineTransformMakeTranslation(0, 0);
-                          schn_ros_view.transform = CGAffineTransformMakeTranslation(0, 0);
-                          schn_gre_view.transform = CGAffineTransformMakeTranslation(0, 0);
-                     }
-                     completion:^(BOOL finished){                                        
-                        [schn_blu_view setImage:[schn_blu_anim objectAtIndex:0]];
-                        [schn_ora_view setImage:[schn_ora_anim objectAtIndex:0]];
-                        [schn_ros_view setImage:[schn_ros_anim objectAtIndex:0]];
-                        [schn_gre_view setImage:[schn_gre_anim objectAtIndex:0]];
-                        [schn_blu_view setAnimationImages:schn_blu_anim];
-                        [schn_ora_view setAnimationImages:schn_ora_anim];
-                        [schn_ros_view setAnimationImages:schn_ros_anim];
-                        [schn_gre_view setAnimationImages:schn_gre_anim];
-                         
-                     }
-     ];
-    
-  
-    schn_blu_pos = 0;
-    schn_ora_pos = 0;
-    schn_ros_pos = 0;
-    schn_gre_pos = 0;
 
 }
 
@@ -325,11 +180,10 @@ BOOL shownmanual = FALSE;
                                               becher.transform = CGAffineTransformMakeTranslation(0, 0); 
                                           }
                                           completion:^(BOOL finished){ 
-                                             
-                                              [self moveSchnWithID:wurf1];
-                                              [self moveSchnWithID:wurf2];
+                                              [self processMoves:wurf1];
+                                              [self processMoves:wurf2];
                                               NSLog(@"wurf 1: %d wurf2 %d", wurf1, wurf2);
-                                              if (schn_blu_pos > 6 | schn_ora_pos > 6 | schn_ros_pos > 6 | schn_gre_pos > 6) {
+                                              if ([schn_blu_view position] > 6 | [schn_ora_view position] > 6 | [schn_ros_view position] > 6 | [schn_gre_view position] > 6) {
                                                   NSString *finsoundPath = [[NSBundle mainBundle] pathForResource:@"kids" ofType:@"mp3"];
                                                   finplayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath: finsoundPath] error:nil];
                                                   finplayer.volume = 1;
@@ -351,10 +205,39 @@ BOOL shownmanual = FALSE;
 
 }
 
+- (void)processMoves:(int)wurf {
+    
+    if (wurf == 1) {
+        [schn_blu_view startJiggling:1];
+        [schn_blu_view setUserInteractionEnabled:YES];
+        [schn_blu_view setPosition:[schn_blu_view position]+1];
+        
+    }
+    
+    if (wurf == 2) {
+        [schn_ora_view startJiggling:1];
+        [schn_ora_view setUserInteractionEnabled:YES];
+        [schn_ora_view setPosition:[schn_ora_view position]+1];
+        
+    }
+    if (wurf == 3) {
+        [schn_ros_view startJiggling:1];
+        [schn_ros_view setUserInteractionEnabled:YES];
+        [schn_ros_view setPosition:[schn_ros_view position]+1];
+        
+    }
+    if (wurf == 4) {
+        [schn_gre_view startJiggling:1];
+        [schn_gre_view setUserInteractionEnabled:YES];
+        [schn_gre_view setPosition:[schn_gre_view position]+1];
+        
+    }
+}
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
    
-    if (schn_blu_pos > 6 ) {
+    if ([schn_blu_view position] > 6 ) {
         if (!alreadywon) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die blaue Schnecke hat gewonnen!",@"Blaue Schnecke win-text")   delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
         [alert show];
@@ -362,7 +245,7 @@ BOOL shownmanual = FALSE;
         alreadywon = TRUE;
     }
     
-    if (schn_ora_pos > 6 ) {
+    if ([schn_ora_view position] > 6 ) {
          if (!alreadywon) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die orange Schnecke hat gewonnen!",@"Orage Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
         [alert show];
@@ -370,7 +253,7 @@ BOOL shownmanual = FALSE;
         alreadywon = TRUE;
     }
     
-    if (schn_ros_pos > 6 ) {
+    if ([schn_ros_view position] > 6 ) {
          if (!alreadywon) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die rosa Schnecke hat gewonnen!",@"rosa Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
         [alert show];
@@ -378,7 +261,7 @@ BOOL shownmanual = FALSE;
         alreadywon = TRUE;
     }
     
-    if (schn_gre_pos > 6 ) {
+    if ([schn_gre_view position] > 6 ) {
           if (!alreadywon) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Ziel!",@"UIAlertView Titel") message:NSLocalizedString(@"Die grüne Schnecke hat gewonnen!",@"grüne Schnecke win-text")  delegate:self cancelButtonTitle:NSLocalizedString(@"Nochmal!", @"win-box knopf") otherButtonTitles: nil];
         [alert show];

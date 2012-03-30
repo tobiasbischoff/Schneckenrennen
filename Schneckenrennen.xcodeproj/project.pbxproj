@@ -36,6 +36,8 @@
 		F6253446151274A900E05C9A /* formback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6253444151274A900E05C9A /* formback@2x.png */; };
 		F625344B151278AD00E05C9A /* ManualViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625344D151278AD00E05C9A /* ManualViewController.xib */; };
 		F625345015127B1D00E05C9A /* w_gre_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F625344F15127B1D00E05C9A /* w_gre_1@2x.png */; };
+		F6C863C815224A9800A5BEA8 /* TBSchnecke.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C863C715224A9800A5BEA8 /* TBSchnecke.m */; };
+		F6C863CB15224B6600A5BEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */; };
 		F6D47B95150A8A2100AD0AFE /* schn_gre_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */; };
 		F6D47B96150A8A2100AD0AFE /* schn_gre_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B92150A8A2100AD0AFE /* schn_gre_1@2x.png */; };
 		F6D47B97150A8A2100AD0AFE /* schn_gre_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B93150A8A2100AD0AFE /* schn_gre_2.png */; };
@@ -103,6 +105,9 @@
 		F625344C151278AD00E05C9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ManualViewController.xib; sourceTree = "<group>"; };
 		F625344E151278B300E05C9A /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ManualViewController.xib; sourceTree = "<group>"; };
 		F625344F15127B1D00E05C9A /* w_gre_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_gre_1@2x.png"; sourceTree = "<group>"; };
+		F6C863C615224A9800A5BEA8 /* TBSchnecke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSchnecke.h; sourceTree = "<group>"; };
+		F6C863C715224A9800A5BEA8 /* TBSchnecke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSchnecke.m; sourceTree = "<group>"; };
+		F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schn_gre_1.png; sourceTree = "<group>"; };
 		F6D47B92150A8A2100AD0AFE /* schn_gre_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schn_gre_1@2x.png"; sourceTree = "<group>"; };
 		F6D47B93150A8A2100AD0AFE /* schn_gre_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schn_gre_2.png; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C863CB15224B6600A5BEA8 /* QuartzCore.framework in Frameworks */,
 				F625341615124CC400E05C9A /* AVFoundation.framework in Frameworks */,
 				F6F96FFF150A5CAC00AA8F40 /* UIKit.framework in Frameworks */,
 				F6F97001150A5CAC00AA8F40 /* Foundation.framework in Frameworks */,
@@ -214,6 +220,8 @@
 		F6F96FEF150A5CAB00AA8F40 = {
 			isa = PBXGroup;
 			children = (
+				F6C863C615224A9800A5BEA8 /* TBSchnecke.h */,
+				F6C863C715224A9800A5BEA8 /* TBSchnecke.m */,
 				F625343615126FE400E05C9A /* ManualViewController.h */,
 				F625343715126FE400E05C9A /* ManualViewController.m */,
 				F625344D151278AD00E05C9A /* ManualViewController.xib */,
@@ -241,6 +249,7 @@
 		F6F96FFD150A5CAC00AA8F40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */,
 				F625341515124CC300E05C9A /* AVFoundation.framework */,
 				F6F96FFE150A5CAC00AA8F40 /* UIKit.framework */,
 				F6F97000150A5CAC00AA8F40 /* Foundation.framework */,
@@ -390,6 +399,7 @@
 				F6F9700F150A5CAC00AA8F40 /* AppDelegate.m in Sources */,
 				F6F97012150A5CAC00AA8F40 /* ViewController.m in Sources */,
 				F625343915126FE400E05C9A /* ManualViewController.m in Sources */,
+				F6C863C815224A9800A5BEA8 /* TBSchnecke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

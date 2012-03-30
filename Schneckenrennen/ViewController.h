@@ -8,40 +8,35 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "TBSchnecke.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController : UIViewController <AVAudioPlayerDelegate>
 {
     AVAudioPlayer * audioplayer;
     AVAudioPlayer * finplayer;
+    TBSchnecke * schn_blu_view;
+    TBSchnecke * schn_ora_view;
+    TBSchnecke * schn_ros_view;
+    TBSchnecke * schn_gre_view;
+    
 }
 - (IBAction)diceButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *schn_blu_view;
-@property (weak, nonatomic) IBOutlet UIImageView *schn_ora_view;
-@property (weak, nonatomic) IBOutlet UIImageView *schn_ros_view;
-@property (weak, nonatomic) IBOutlet UIImageView *schn_gre_view;
+
 @property (weak, nonatomic) IBOutlet UILabel *gameName;
 
-@property (strong, nonatomic) NSArray * schn_blu_anim;
-@property (strong, nonatomic) NSArray * schn_blu_anim_flip;
-
-@property (strong, nonatomic) NSArray * schn_ora_anim;
-@property (strong, nonatomic) NSArray * schn_ora_anim_flip;
-
-@property (strong, nonatomic) NSArray * schn_ros_anim;
-@property (strong, nonatomic) NSArray * schn_ros_anim_flip;
-
-@property (strong, nonatomic) NSArray * schn_gre_anim;
-@property (strong, nonatomic) NSArray * schn_gre_anim_flip;
 
 @property (weak, nonatomic) IBOutlet UIImageView *becher;
 @property (weak, nonatomic) IBOutlet UIImageView *w1View;
 @property (weak, nonatomic) IBOutlet UIImageView *w2View;
 @property (weak, nonatomic) IBOutlet UIButton *diceButton;
 
-- (void)moveSchnWithID:(int)id;
+
 - (void)setW1withID:(int)id;
 - (void)setW2withID:(int)id;
 
 - (void)newgame;
+
+- (void)processMoves:(int)wurf;
 
 @end
