@@ -157,6 +157,7 @@
                      }
      ];
     [self setPosition:0];
+    [self setRealposition:0];
     
 }
 

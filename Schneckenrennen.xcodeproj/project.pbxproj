@@ -40,11 +40,11 @@
 		F63B50661528D77E005A7B47 /* wuerfel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F63B50651528D77E005A7B47 /* wuerfel.mp3 */; };
 		F6ABCCD2152CC93300877092 /* qeek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCD1152CC93300877092 /* qeek.mp3 */; };
 		F6ABCCD6152CC9B800877092 /* WinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCCD4152CC9B800877092 /* WinViewController.m */; };
-		F6ABCCD7152CC9B800877092 /* WinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCD5152CC9B800877092 /* WinViewController.xib */; };
 		F6ABCCDE152CE2F100877092 /* monkeywoo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCDC152CE2F100877092 /* monkeywoo.png */; };
 		F6ABCCDF152CE2F100877092 /* monkeywoo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCDD152CE2F100877092 /* monkeywoo@2x.png */; };
 		F6ABCCE1152CE30000877092 /* monkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE0152CE30000877092 /* monkey.mp3 */; };
 		F6ABCCE3152CE62A00877092 /* stonesound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE2152CE62A00877092 /* stonesound.mp3 */; };
+		F6ABCCE4152CECE300877092 /* WinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE6152CECE300877092 /* WinViewController.xib */; };
 		F6C863C815224A9800A5BEA8 /* TBSchnecke.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C863C715224A9800A5BEA8 /* TBSchnecke.m */; };
 		F6C863CB15224B6600A5BEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */; };
 		F6D47B95150A8A2100AD0AFE /* schn_gre_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */; };
@@ -117,13 +117,14 @@
 		F63B505E15279BEF005A7B47 /* Reggae.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Reggae.mp3; sourceTree = "<group>"; };
 		F63B50651528D77E005A7B47 /* wuerfel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wuerfel.mp3; sourceTree = "<group>"; };
 		F6ABCCD1152CC93300877092 /* qeek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qeek.mp3; sourceTree = "<group>"; };
-		F6ABCCD3152CC9B800877092 /* WinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinViewController.h; sourceTree = "<group>"; };
-		F6ABCCD4152CC9B800877092 /* WinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinViewController.m; sourceTree = "<group>"; };
-		F6ABCCD5152CC9B800877092 /* WinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinViewController.xib; sourceTree = "<group>"; };
+		F6ABCCD3152CC9B800877092 /* WinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinViewController.h; path = ../WinViewController.h; sourceTree = "<group>"; };
+		F6ABCCD4152CC9B800877092 /* WinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinViewController.m; path = ../WinViewController.m; sourceTree = "<group>"; };
 		F6ABCCDC152CE2F100877092 /* monkeywoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkeywoo.png; sourceTree = "<group>"; };
 		F6ABCCDD152CE2F100877092 /* monkeywoo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monkeywoo@2x.png"; sourceTree = "<group>"; };
 		F6ABCCE0152CE30000877092 /* monkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monkey.mp3; sourceTree = "<group>"; };
 		F6ABCCE2152CE62A00877092 /* stonesound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stonesound.mp3; sourceTree = "<group>"; };
+		F6ABCCE5152CECE300877092 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WinViewController.xib; sourceTree = "<group>"; };
+		F6ABCCE7152CECEA00877092 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/WinViewController.xib; sourceTree = "<group>"; };
 		F6C863C615224A9800A5BEA8 /* TBSchnecke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBSchnecke.h; path = ../TBSchnecke.h; sourceTree = "<group>"; };
 		F6C863C715224A9800A5BEA8 /* TBSchnecke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBSchnecke.m; path = ../TBSchnecke.m; sourceTree = "<group>"; };
 		F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -249,9 +250,6 @@
 		F6F96FEF150A5CAB00AA8F40 = {
 			isa = PBXGroup;
 			children = (
-				F6ABCCD3152CC9B800877092 /* WinViewController.h */,
-				F6ABCCD4152CC9B800877092 /* WinViewController.m */,
-				F6ABCCD5152CC9B800877092 /* WinViewController.xib */,
 				F63B505B15265F1E005A7B47 /* TODO.txt */,
 				F625341415124BF700E05C9A /* Sounds */,
 				F6F97004150A5CAC00AA8F40 /* Schneckenrennen */,
@@ -284,6 +282,9 @@
 		F6F97004150A5CAC00AA8F40 /* Schneckenrennen */ = {
 			isa = PBXGroup;
 			children = (
+				F6ABCCD3152CC9B800877092 /* WinViewController.h */,
+				F6ABCCD4152CC9B800877092 /* WinViewController.m */,
+				F6ABCCE6152CECE300877092 /* WinViewController.xib */,
 				F6C863C615224A9800A5BEA8 /* TBSchnecke.h */,
 				F6C863C715224A9800A5BEA8 /* TBSchnecke.m */,
 				F625343615126FE400E05C9A /* ManualViewController.h */,
@@ -417,7 +418,7 @@
 				F63B505F15279BEF005A7B47 /* Reggae.mp3 in Resources */,
 				F63B50661528D77E005A7B47 /* wuerfel.mp3 in Resources */,
 				F6ABCCD2152CC93300877092 /* qeek.mp3 in Resources */,
-				F6ABCCD7152CC9B800877092 /* WinViewController.xib in Resources */,
+				F6ABCCE4152CECE300877092 /* WinViewController.xib in Resources */,
 				F6ABCCDE152CE2F100877092 /* monkeywoo.png in Resources */,
 				F6ABCCDF152CE2F100877092 /* monkeywoo@2x.png in Resources */,
 				F6ABCCE1152CE30000877092 /* monkey.mp3 in Resources */,
@@ -460,6 +461,16 @@
 				F625344E151278B300E05C9A /* de */,
 			);
 			name = ManualViewController.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F6ABCCE6152CECE300877092 /* WinViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6ABCCE5152CECE300877092 /* en */,
+				F6ABCCE7152CECEA00877092 /* de */,
+			);
+			name = WinViewController.xib;
 			path = ..;
 			sourceTree = "<group>";
 		};
