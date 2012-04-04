@@ -19,21 +19,25 @@
         if (frame.origin.y == 15) {
             image1name = [NSString stringWithFormat:@"schn_blu_1.png"];
             image2name = [NSString stringWithFormat:@"schn_blu_2.png"];
+            sID = @"blu";
         }
         
         if (frame.origin.y == 156) {
             image1name = [NSString stringWithFormat:@"schn_ora_1.png"];
             image2name = [NSString stringWithFormat:@"schn_ora_2.png"];
+            sID = @"ora";
         }
         
         if (frame.origin.y == 291) {
             image1name = [NSString stringWithFormat:@"schn_ros_1.png"];
             image2name = [NSString stringWithFormat:@"schn_ros_2.png"];
+            sID = @"ros";
         }
         
         if (frame.origin.y == 420) {
             image1name = [NSString stringWithFormat:@"schn_gre_1.png"];
             image2name = [NSString stringWithFormat:@"schn_gre_2.png"];
+            sID = @"gre";
         }
         
         [self setImage:[UIImage imageNamed:image1name]];
@@ -55,6 +59,12 @@
         [self setUserInteractionEnabled:NO];
         position = 0;
         
+        //load qeek
+        NSString *qeeksoundPath = [[NSBundle mainBundle] pathForResource:@"qeek" ofType:@"mp3"];
+        qeekplayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath: qeeksoundPath] error:nil];
+        qeekplayer.volume = 1;
+        [qeekplayer prepareToPlay];
+        
          }
     return self;
 }
@@ -66,24 +76,31 @@
     [self stopJiggling];
     [self startAnimating];
     [[self superview] bringSubviewToFront:self];
-    
+    [self setUserInteractionEnabled:NO];
     [UIView beginAnimations:nil context:NULL];  
-    [UIView setAnimationDuration: 1];  
-    [UIView setAnimationDelay:0];
-    [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];  
-    [UIView setAnimationBeginsFromCurrentState:YES]; 
+    [qeekplayer play];
     
     if (position == 0) position = 1;
-    if (position > 6) position--;    
-    //self.transform = CGAffineTransformMakeTranslation(position*120, 0);
-    
-    [self setFrame:CGRectMake(30+position*120, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
-    realposition = position;
-    
+   // if (position > 6) position--;    
+   
     [UIView commitAnimations];
     
-    [self setUserInteractionEnabled:NO];
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{ 
+                         [self setFrame:CGRectMake(30+position*120, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
+                          }
+                     completion: ^(BOOL finished){
+                         realposition = position;
+                         if (realposition > 5) {
+                         NSNotification *note = [NSNotification notificationWithName:sID object:self];
+                         [[NSNotificationCenter defaultCenter] postNotification:note];
+                         }
+                     }];
     
+    
+   
 }
 
 
@@ -112,7 +129,6 @@
                          self.transform = rightWobble; }
                      completion:nil];
     
-
      
 }
 
@@ -122,15 +138,17 @@
 }
 
 - (void)goback {
+    [self stopJiggling];
+    [self setUserInteractionEnabled:NO];
     [self setAnimationImages:schn_anim_flip];
     [self setImage:[schn_anim_flip objectAtIndex:0]];
     [self startAnimating];
     
-    [UIView animateWithDuration:1
+    [UIView animateWithDuration:2
                           delay:0
                         options:UIViewAnimationCurveEaseOut
                      animations:^{                                                                                            
-                         self.transform = CGAffineTransformMakeTranslation(0, 0);       
+                        [self setFrame:CGRectMake(30, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];     
                         }
                      completion:^(BOOL finished){                                        
                          [self setImage:[schn_anim objectAtIndex:0]];

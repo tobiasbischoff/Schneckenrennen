@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/CoreAnimation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class ViewController;
 
 @interface TBSchnecke : UIImageView {
  
+    AVAudioPlayer * qeekplayer;
     NSArray * schn_anim;
     NSArray * schn_anim_flip;
     NSString * image1name;
     NSString * image2name;
+    NSString * sID;
 }
 
 @property (nonatomic) int xmax;
