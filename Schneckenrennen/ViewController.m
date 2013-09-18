@@ -63,10 +63,10 @@ BOOL shownmanual = FALSE;
     [nc addObserver:self selector:@selector(newgame:) name:@"again" object:nil];
     
     //Schnecke ist eigene Klasse test
-    schn_blu_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 15, 137, 116)];
-    schn_ora_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 156, 137, 116)];
-    schn_ros_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 291, 137, 116)];
-    schn_gre_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 420, 137, 116)];
+    schn_blu_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 35, 137, 116)];
+    schn_ora_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 176, 137, 116)];
+    schn_ros_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 311, 137, 116)];
+    schn_gre_view = [[TBSchnecke alloc] initWithFrame:CGRectMake(30, 440, 137, 116)];
     
     [[self view] addSubview:schn_blu_view];
     [[self view] addSubview:schn_ora_view];
@@ -273,25 +273,25 @@ BOOL shownmanual = FALSE;
 - (void)schneckeGewonnen:(NSNotification *)note {
     
     WinViewController * wvc = [[WinViewController alloc] init];
-    if (note.name == @"blu") {
+    if ([note.name  isEqual: @"blu"]) {
         [wvc setWinnerImage:[UIImage imageNamed:@"schn_blu_1.png"]];
         [wvc setLabeltext:NSLocalizedString(@"Die grossartige blaue Schnecke hat gewonnen!!", @"blu-win-text")];
         
     }
     
-    if (note.name == @"ora") {
+    if ([note.name  isEqual: @"ora"]) {
         [wvc setWinnerImage:[UIImage imageNamed:@"schn_ora_1.png"]];
         [wvc setLabeltext:NSLocalizedString(@"Die grossartige orange Schnecke hat gewonnen!!", @"ora-win-text")];
         
     }
     
-    if (note.name == @"ros") {
+    if ([note.name  isEqual: @"ros"]) {
         [wvc setWinnerImage:[UIImage imageNamed:@"schn_ros_1.png"]];
         [wvc setLabeltext:NSLocalizedString(@"Die grossartige rosa Schnecke hat gewonnen!!", @"ros-win-text")];
         
     }
     
-    if (note.name == @"gre") {
+    if ([note.name  isEqual: @"gre"]) {
         [wvc setWinnerImage:[UIImage imageNamed:@"schn_gre_1.png"]];
         [wvc setLabeltext:NSLocalizedString(@"Die grossartige grüne Schnecke hat gewonnen!!", @"gre-win-text")];
         

@@ -21,10 +21,6 @@
 		F625341615124CC400E05C9A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F625341515124CC300E05C9A /* AVFoundation.framework */; };
 		F625341F1512559F00E05C9A /* taetere.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F625341D1512559F00E05C9A /* taetere.mp3 */; };
 		F625342215125D6C00E05C9A /* kids.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F625342115125D6C00E05C9A /* kids.mp3 */; };
-		F62534241512619800E05C9A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62534231512619800E05C9A /* icon@2x.png */; };
-		F62534261512619C00E05C9A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F62534251512619C00E05C9A /* icon.png */; };
-		F6253428151264C400E05C9A /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F6253427151264C400E05C9A /* Default-Landscape~ipad.png */; };
-		F625342A151264C700E05C9A /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = F6253429151264C700E05C9A /* Default-Landscape@2x~ipad.png */; };
 		F625342D15126C6A00E05C9A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F625342F15126C6A00E05C9A /* Localizable.strings */; };
 		F625343915126FE400E05C9A /* ManualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625343715126FE400E05C9A /* ManualViewController.m */; };
 		F625343D151270F400E05C9A /* help1.png in Resources */ = {isa = PBXBuildFile; fileRef = F625343B151270F400E05C9A /* help1.png */; };
@@ -45,6 +41,7 @@
 		F6ABCCE1152CE30000877092 /* monkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE0152CE30000877092 /* monkey.mp3 */; };
 		F6ABCCE3152CE62A00877092 /* stonesound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE2152CE62A00877092 /* stonesound.mp3 */; };
 		F6ABCCE4152CECE300877092 /* WinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCCE6152CECE300877092 /* WinViewController.xib */; };
+		F6BEB58817E993B000450C15 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6BEB58717E993B000450C15 /* Images.xcassets */; };
 		F6C863C815224A9800A5BEA8 /* TBSchnecke.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C863C715224A9800A5BEA8 /* TBSchnecke.m */; };
 		F6C863CB15224B6600A5BEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */; };
 		F6D47B95150A8A2100AD0AFE /* schn_gre_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D47B91150A8A2100AD0AFE /* schn_gre_1.png */; };
@@ -94,10 +91,6 @@
 		F625341515124CC300E05C9A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F625341D1512559F00E05C9A /* taetere.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taetere.mp3; sourceTree = "<group>"; };
 		F625342115125D6C00E05C9A /* kids.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kids.mp3; sourceTree = "<group>"; };
-		F62534231512619800E05C9A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		F62534251512619C00E05C9A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		F6253427151264C400E05C9A /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		F6253429151264C700E05C9A /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		F625342E15126C6A00E05C9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F625343015126C7900E05C9A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F625343415126E0C00E05C9A /* Schneckenrennen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Schneckenrennen-Info.plist"; sourceTree = "<group>"; };
@@ -116,6 +109,11 @@
 		F63B505B15265F1E005A7B47 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		F63B505E15279BEF005A7B47 /* Reggae.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Reggae.mp3; sourceTree = "<group>"; };
 		F63B50651528D77E005A7B47 /* wuerfel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wuerfel.mp3; sourceTree = "<group>"; };
+		F6A1541D15B2CBF4004247D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F6A1541E15B2CBF4004247D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/ViewController.xib"; sourceTree = "<group>"; };
+		F6A1541F15B2CBF4004247D9 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F6A1542115B2CBF4004247D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/WinViewController.xib"; sourceTree = "<group>"; };
+		F6A1542215B2CBF4004247D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/ManualViewController.xib"; sourceTree = "<group>"; };
 		F6ABCCD1152CC93300877092 /* qeek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qeek.mp3; sourceTree = "<group>"; };
 		F6ABCCD3152CC9B800877092 /* WinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinViewController.h; path = ../WinViewController.h; sourceTree = "<group>"; };
 		F6ABCCD4152CC9B800877092 /* WinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinViewController.m; path = ../WinViewController.m; sourceTree = "<group>"; };
@@ -125,6 +123,7 @@
 		F6ABCCE2152CE62A00877092 /* stonesound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stonesound.mp3; sourceTree = "<group>"; };
 		F6ABCCE5152CECE300877092 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WinViewController.xib; sourceTree = "<group>"; };
 		F6ABCCE7152CECEA00877092 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/WinViewController.xib; sourceTree = "<group>"; };
+		F6BEB58717E993B000450C15 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6C863C615224A9800A5BEA8 /* TBSchnecke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBSchnecke.h; path = ../TBSchnecke.h; sourceTree = "<group>"; };
 		F6C863C715224A9800A5BEA8 /* TBSchnecke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBSchnecke.m; path = ../TBSchnecke.m; sourceTree = "<group>"; };
 		F6C863CA15224B6600A5BEA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -199,10 +198,6 @@
 			children = (
 				F6ABCCDC152CE2F100877092 /* monkeywoo.png */,
 				F6ABCCDD152CE2F100877092 /* monkeywoo@2x.png */,
-				F6253429151264C700E05C9A /* Default-Landscape@2x~ipad.png */,
-				F6253427151264C400E05C9A /* Default-Landscape~ipad.png */,
-				F62534251512619C00E05C9A /* icon.png */,
-				F62534231512619800E05C9A /* icon@2x.png */,
 				F6253443151274A900E05C9A /* formback.png */,
 				F6253444151274A900E05C9A /* formback@2x.png */,
 				F625343F1512731A00E05C9A /* help2.png */,
@@ -296,6 +291,7 @@
 				F6F97010150A5CAC00AA8F40 /* ViewController.h */,
 				F6F97011150A5CAC00AA8F40 /* ViewController.m */,
 				F6F97013150A5CAC00AA8F40 /* ViewController.xib */,
+				F6BEB58717E993B000450C15 /* Images.xcassets */,
 				F6F97005150A5CAC00AA8F40 /* Supporting Files */,
 			);
 			path = Schneckenrennen;
@@ -385,6 +381,7 @@
 				F6D47BA5150BE5DE00AD0AFE /* becher_g.png in Resources */,
 				F6D47BA6150BE5DE00AD0AFE /* becher_g@2x.png in Resources */,
 				F6D47BA7150BE5DE00AD0AFE /* becher_l.png in Resources */,
+				F6BEB58817E993B000450C15 /* Images.xcassets in Resources */,
 				F6D47BA8150BE5DE00AD0AFE /* becher_l@2x.png in Resources */,
 				F6D47BA9150BE5DE00AD0AFE /* becher_r.png in Resources */,
 				F6D47BAA150BE5DE00AD0AFE /* becher_r@2x.png in Resources */,
@@ -401,10 +398,6 @@
 				F6253411151105C400E05C9A /* w_ros_1@2x.png in Resources */,
 				F625341F1512559F00E05C9A /* taetere.mp3 in Resources */,
 				F625342215125D6C00E05C9A /* kids.mp3 in Resources */,
-				F62534241512619800E05C9A /* icon@2x.png in Resources */,
-				F62534261512619C00E05C9A /* icon.png in Resources */,
-				F6253428151264C400E05C9A /* Default-Landscape~ipad.png in Resources */,
-				F625342A151264C700E05C9A /* Default-Landscape@2x~ipad.png in Resources */,
 				F625342D15126C6A00E05C9A /* Localizable.strings in Resources */,
 				F625344B151278AD00E05C9A /* ManualViewController.xib in Resources */,
 				F625343D151270F400E05C9A /* help1.png in Resources */,
@@ -450,6 +443,7 @@
 			children = (
 				F625342E15126C6A00E05C9A /* en */,
 				F625343015126C7900E05C9A /* de */,
+				F6A1541D15B2CBF4004247D9 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -459,6 +453,7 @@
 			children = (
 				F625344C151278AD00E05C9A /* en */,
 				F625344E151278B300E05C9A /* de */,
+				F6A1542215B2CBF4004247D9 /* zh-Hans */,
 			);
 			name = ManualViewController.xib;
 			path = ..;
@@ -469,6 +464,7 @@
 			children = (
 				F6ABCCE5152CECE300877092 /* en */,
 				F6ABCCE7152CECEA00877092 /* de */,
+				F6A1542115B2CBF4004247D9 /* zh-Hans */,
 			);
 			name = WinViewController.xib;
 			path = ..;
@@ -479,6 +475,7 @@
 			children = (
 				F6F97008150A5CAC00AA8F40 /* en */,
 				F625343515126E4700E05C9A /* de */,
+				F6A1541F15B2CBF4004247D9 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -487,6 +484,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F6F97014150A5CAC00AA8F40 /* en */,
+				F6A1541E15B2CBF4004247D9 /* zh-Hans */,
 			);
 			name = ViewController.xib;
 			sourceTree = "<group>";
@@ -515,6 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -535,6 +534,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -544,9 +544,12 @@
 		F6F97019150A5CAC00AA8F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Schneckenrennen/Schneckenrennen-Prefix.pch";
 				INFOPLIST_FILE = "Schneckenrennen/Schneckenrennen-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -555,10 +558,15 @@
 		F6F9701A150A5CAC00AA8F40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Schneckenrennen/Schneckenrennen-Prefix.pch";
 				INFOPLIST_FILE = "Schneckenrennen/Schneckenrennen-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -16,25 +16,25 @@
     self = [super initWithFrame:frame];
     if (self) {
         //set image
-        if (frame.origin.y == 15) {
+        if (frame.origin.y == 35) {
             image1name = [NSString stringWithFormat:@"schn_blu_1.png"];
             image2name = [NSString stringWithFormat:@"schn_blu_2.png"];
             sID = @"blu";
         }
         
-        if (frame.origin.y == 156) {
+        if (frame.origin.y == 176) {
             image1name = [NSString stringWithFormat:@"schn_ora_1.png"];
             image2name = [NSString stringWithFormat:@"schn_ora_2.png"];
             sID = @"ora";
         }
         
-        if (frame.origin.y == 291) {
+        if (frame.origin.y == 311) {
             image1name = [NSString stringWithFormat:@"schn_ros_1.png"];
             image2name = [NSString stringWithFormat:@"schn_ros_2.png"];
             sID = @"ros";
         }
         
-        if (frame.origin.y == 420) {
+        if (frame.origin.y == 440) {
             image1name = [NSString stringWithFormat:@"schn_gre_1.png"];
             image2name = [NSString stringWithFormat:@"schn_gre_2.png"];
             sID = @"gre";
